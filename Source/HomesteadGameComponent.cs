@@ -188,6 +188,12 @@ namespace Homestead
                         {
                             continue;
                         }
+                        // Skipped, not marked notified: the letter can still fire
+                        // later if they marry (or their ideoligion changes).
+                        if (!CompAssignableToPawn_House.IdeoAllowsCohabitation(pawn, partner))
+                        {
+                            continue;
+                        }
                         int key = Gen.HashCombineInt(pawn.thingIDNumber, partner.thingIDNumber);
                         if (!notifiedCouples.Add(key))
                         {

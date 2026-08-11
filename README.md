@@ -7,7 +7,10 @@ A RimWorld 1.6 mod that gives colonists **houses**, not just bedrooms.
 - **Welcome mat** (Furniture category, no research, stuffable; internally still
   `Homestead_HouseMarker` for save compatibility): a flat, walkable mat — lay it
   inside a room, traditionally by the front door, and assign an owner. Their spouse/fiancé/lover and minor children move in
-  automatically; the assign dialog lets you override anyone. The house covers the
+  automatically; the assign dialog lets you override anyone. Cohabitation follows
+  the same ideoligion rules as bed sharing: unmarried partners whose precepts
+  forbid sharing a bed (spouses-only lovin') won't auto-move-in, can't be
+  assigned together, and skip the merge-households letter until they marry. The house covers the
   marker's room plus rooms connected through doors (configurable depth, capped by
   room size so it won't swallow dining halls), and an optional painted **yard**.
 - **Whole-house mood**: housed pawns get a situational thought graded on the
