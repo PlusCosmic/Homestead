@@ -43,7 +43,8 @@ namespace Homestead
             {
                 foreach (Pawn member in FamilyOf(pawn))
                 {
-                    if (!assignedPawns.Contains(member) && assignedPawns.Count < Props.maxAssignedPawnsCount)
+                    if (!assignedPawns.Contains(member) && assignedPawns.Count < Props.maxAssignedPawnsCount
+                        && !IdeoligionForbids(member))
                     {
                         TryAssignPawn(member);
                     }
@@ -53,6 +54,31 @@ namespace Homestead
             {
                 expandingFamily = false;
             }
+        }
+
+        // Same rule as beds: love partners whose ideoligion forbids sharing a bed
+        // (e.g. spouses-only lovin') don't move in together either. Non-partners
+        // sharing a house is always fine — they have their own bedrooms.
+        public static bool IdeoAllowsCohabitation(Pawn a, Pawn b)
+        {
+            if (!ModsConfig.IdeologyActive || a == null || b == null
+                || !LovePartnerRelationUtility.LovePartnerRelationExists(a, b))
+            {
+                return true;
+            }
+            return BedUtility.WillingToShareBed(a, b);
+        }
+
+        public override bool IdeoligionForbids(Pawn pawn)
+        {
+            foreach (Pawn assigned in AssignedPawns)
+            {
+                if (!IdeoAllowsCohabitation(pawn, assigned))
+                {
+                    return true;
+                }
+            }
+            return base.IdeoligionForbids(pawn);
         }
 
         public override void TryUnassignPawn(Pawn pawn, bool sort = true, bool uninstall = false)
@@ -91,7 +117,7 @@ namespace Homestead
                     || rel.def == PawnRelationDefOf.Lover)
                 {
                     Pawn partner = rel.otherPawn;
-                    if (IsColonyMember(partner))
+                    if (IsColonyMember(partner) && IdeoAllowsCohabitation(pawn, partner))
                     {
                         family.Add(partner);
                         foreach (Pawn stepChild in MinorChildrenOf(partner))
