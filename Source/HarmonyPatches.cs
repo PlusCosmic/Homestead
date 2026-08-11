@@ -40,6 +40,10 @@ namespace Homestead
                     new[] { typeof(Pawn), typeof(Thing), typeof(bool) }),
                 postfix: new HarmonyMethod(typeof(HomesteadPatches), nameof(HomesteadPatches.CanInteractWith_Postfix)));
 
+            TryPatch(harmony,
+                AccessTools.Method(typeof(Need_Rest), nameof(Need_Rest.TickResting)),
+                prefix: new HarmonyMethod(typeof(HomesteadPatches), nameof(HomesteadPatches.TickResting_Prefix)));
+
             InjectDoorBoundaryComp();
             MoodScaler.Apply();
         }
@@ -141,6 +145,21 @@ namespace Homestead
             if (house != null && house.Owners.Count > 0 && !house.IsMember(p))
             {
                 __result = false;
+            }
+        }
+
+        // There's no place like bed: resting inside your own house is more effective.
+        public static void TickResting_Prefix(Pawn ___pawn, ref float restEffectiveness)
+        {
+            float bonus = HomesteadMod.Settings?.homeRestBonus ?? 0f;
+            if (bonus <= 0f || ___pawn == null || !___pawn.Spawned || !___pawn.IsFreeColonist)
+            {
+                return;
+            }
+            CompHouseMarker house = ___pawn.Map.GetComponent<HouseManager>()?.GetHouseOf(___pawn);
+            if (house != null && house.ContainsCell(___pawn.Position))
+            {
+                restEffectiveness *= 1f + bonus;
             }
         }
 

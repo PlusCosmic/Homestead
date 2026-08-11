@@ -26,6 +26,11 @@
   <Homestead_InspectRooms>Rooms: {0} ({1} cells, {2} yard)</Homestead_InspectRooms>
   <Homestead_InspectImpressiveness>House impressiveness: {0} ({1})</Homestead_InspectImpressiveness>
   <Homestead_InspectCleanliness>House cleanliness: {0}</Homestead_InspectCleanliness>
+  <Homestead_InspectBathroom>Bathroom: {0}</Homestead_InspectBathroom>
+  <Homestead_BathroomFull>toilet and washing</Homestead_BathroomFull>
+  <Homestead_BathroomNoWashing>toilet, nowhere to wash</Homestead_BathroomNoWashing>
+  <Homestead_BathroomNoToilet>washing, no toilet</Homestead_BathroomNoToilet>
+  <Homestead_BathroomNone>none</Homestead_BathroomNone>
 
   <Homestead_TabOwnersHeader>Household</Homestead_TabOwnersHeader>
   <Homestead_TabStatsHeader>House</Homestead_TabStatsHeader>
@@ -37,6 +42,9 @@
   <Homestead_LetterMergeLabel>Couple in separate houses</Homestead_LetterMergeLabel>
   <Homestead_LetterMergeText>{0} and {1} are a couple, but they live in separate houses. Consider assigning them to the same house marker so they can share a home.</Homestead_LetterMergeText>
 
+  <Homestead_LetterSettlerLabel>Settler: {PAWN_nameDef}</Homestead_LetterSettlerLabel>
+  <Homestead_LetterSettlerText>Word of an empty home has spread. {PAWN_nameDef}, drawn by the promise of {1}, has arrived to settle there and join the colony.</Homestead_LetterSettlerText>
+
   <Homestead_SettingsHomeless>Homeless mood debuff</Homestead_SettingsHomeless>
   <Homestead_SettingsHomelessDesc>Once the colony is established (a house exists, or a year has passed), colonists without a house get a mood debuff that worsens over time.</Homestead_SettingsHomelessDesc>
   <Homestead_SettingsGuests>Friends visit each other's homes</Homestead_SettingsGuests>
@@ -45,6 +53,12 @@
   <Homestead_SettingsAvoidanceDesc>Colonists won't idly wander into, clean, haul from, or use recreation buildings inside someone else's house. Emergencies (firefighting, rescue, doctoring, drafted orders, forced jobs) are unaffected.</Homestead_SettingsAvoidanceDesc>
   <Homestead_SettingsReplaceBedroom>House thoughts replace bedroom thoughts</Homestead_SettingsReplaceBedroom>
   <Homestead_SettingsReplaceBedroomDesc>Housed pawns judge their whole house instead of getting the vanilla 'slept in bedroom/barracks' thoughts. Pawns without a house keep vanilla behaviour.</Homestead_SettingsReplaceBedroomDesc>
+  <Homestead_SettingsSettlers>Empty homes attract settlers</Homestead_SettingsSettlers>
+  <Homestead_SettingsSettlersDesc>A built, furnished house with no owners occasionally attracts a wandering settler who moves in and joins the colony. Respects the storyteller's population limits.</Homestead_SettingsSettlersDesc>
+  <Homestead_SettingsBathroom>Houses want a bathroom (Dubs Bad Hygiene)</Homestead_SettingsBathroom>
+  <Homestead_SettingsBathroomDesc>Housed colonists want a toilet and a place to wash inside their house: a mood debuff without, a small buff with both.</Homestead_SettingsBathroomDesc>
+  <Homestead_SettingsRestBonus>Rest bonus at home: +{0}%</Homestead_SettingsRestBonus>
+  <Homestead_SettingsRestBonusDesc>Colonists sleeping inside their own house rest this much faster.</Homestead_SettingsRestBonusDesc>
   <Homestead_SettingsMoodScale>Mood effect scale: {0}%</Homestead_SettingsMoodScale>
   <Homestead_SettingsMoodScaleDesc>Multiplies the mood effect of every Homestead thought.</Homestead_SettingsMoodScaleDesc>
   <Homestead_SettingsClaimDepth>Room claim depth: {0}</Homestead_SettingsClaimDepth>

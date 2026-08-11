@@ -8,7 +8,10 @@ namespace Homestead
         public bool enableGuestVisits = true;
         public bool enableAvoidance = true;
         public bool replaceBedroomThoughts = true;
+        public bool enableSettlerAttraction = true;
+        public bool enableBathroomNeeds = true;
         public float moodScale = 1f;
+        public float homeRestBonus = 0.10f;
         public int claimDepth = 3;
         public int maxRoomCells = 225;
 
@@ -25,7 +28,10 @@ namespace Homestead
             Scribe_Values.Look(ref enableGuestVisits, "enableGuestVisits", true);
             Scribe_Values.Look(ref enableAvoidance, "enableAvoidance", true);
             Scribe_Values.Look(ref replaceBedroomThoughts, "replaceBedroomThoughts", true);
+            Scribe_Values.Look(ref enableSettlerAttraction, "enableSettlerAttraction", true);
+            Scribe_Values.Look(ref enableBathroomNeeds, "enableBathroomNeeds", true);
             Scribe_Values.Look(ref moodScale, "moodScale", 1f);
+            Scribe_Values.Look(ref homeRestBonus, "homeRestBonus", 0.10f);
             Scribe_Values.Look(ref claimDepth, "claimDepth", 3);
             Scribe_Values.Look(ref maxRoomCells, "maxRoomCells", 225);
         }

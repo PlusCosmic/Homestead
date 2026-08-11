@@ -29,8 +29,18 @@ namespace Homestead
                 "Homestead_SettingsAvoidanceDesc".Translate());
             listing.CheckboxLabeled("Homestead_SettingsReplaceBedroom".Translate(), ref Settings.replaceBedroomThoughts,
                 "Homestead_SettingsReplaceBedroomDesc".Translate());
+            listing.CheckboxLabeled("Homestead_SettingsSettlers".Translate(), ref Settings.enableSettlerAttraction,
+                "Homestead_SettingsSettlersDesc".Translate());
+            if (DbhCompat.Active)
+            {
+                listing.CheckboxLabeled("Homestead_SettingsBathroom".Translate(), ref Settings.enableBathroomNeeds,
+                    "Homestead_SettingsBathroomDesc".Translate());
+            }
 
             listing.Gap();
+            listing.Label("Homestead_SettingsRestBonus".Translate(Mathf.RoundToInt(Settings.homeRestBonus * 100f)),
+                tooltip: "Homestead_SettingsRestBonusDesc".Translate());
+            Settings.homeRestBonus = listing.Slider(Settings.homeRestBonus, 0f, 0.25f);
             listing.Label("Homestead_SettingsMoodScale".Translate(Mathf.RoundToInt(Settings.moodScale * 100f)),
                 tooltip: "Homestead_SettingsMoodScaleDesc".Translate());
             Settings.moodScale = listing.Slider(Settings.moodScale, 0.25f, 2f);
