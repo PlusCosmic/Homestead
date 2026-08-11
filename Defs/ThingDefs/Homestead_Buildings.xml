@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>Homestead_HouseMarker</defName>
+    <label>welcome mat</label>
+    <description>A homely mat marking a dwelling as someone's home. Lay it inside, by the front door, and assign an owner; their spouse, fiance, lover and children are added automatically. The house covers the mat's room and connected rooms behind its doors, and can be extended with a painted yard.\n\nHoused colonists judge their whole house rather than just their bedroom, keep it clean and repaired themselves, and dislike strangers wandering in. The mat must be indoors - a mat on the outside step is charming but won't anchor a house.</description>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <tickerType>Never</tickerType>
+    <drawerType>MapMeshOnly</drawerType>
+    <graphicData>
+      <texPath>Homestead/HouseMarker</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.95,0.75)</drawSize>
+      <!-- Long edge is 0.75 tall, so +0.155 puts it just past the cell border,
+           kissing the door on the neighbouring tile. -->
+      <drawOffsetNorth>(0,0,0.155)</drawOffsetNorth>
+      <drawOffsetSouth>(0,0,-0.155)</drawOffsetSouth>
+      <drawOffsetEast>(0.155,0,0)</drawOffsetEast>
+      <drawOffsetWest>(-0.155,0,0)</drawOffsetWest>
+    </graphicData>
+    <altitudeLayer>FloorEmplacement</altitudeLayer>
+    <passability>Standable</passability>
+    <pathCost>0</pathCost>
+    <fillPercent>0</fillPercent>
+    <rotatable>true</rotatable>
+    <size>(1,1)</size>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToBuild>400</WorkToBuild>
+      <Flammability>1.0</Flammability>
+      <Beauty>2</Beauty>
+      <Mass>3</Mass>
+    </statBases>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>25</costStuffCount>
+    <designationCategory>Furniture</designationCategory>
+    <uiOrder>2400</uiOrder>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <thingCategories>
+      <li>BuildingsFurniture</li>
+    </thingCategories>
+    <inspectorTabs>
+      <li>Homestead.ITab_House</li>
+    </inspectorTabs>
+    <comps>
+      <li Class="CompProperties_AssignableToPawn">
+        <compClass>Homestead.CompAssignableToPawn_House</compClass>
+        <drawAssignmentOverlay>false</drawAssignmentOverlay>
+        <maxAssignedPawnsCount>8</maxAssignedPawnsCount>
+      </li>
+      <li Class="Homestead.CompProperties_HouseMarker" />
+    </comps>
+  </ThingDef>
+
+</Defs>

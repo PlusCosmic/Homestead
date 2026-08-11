@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Sits just above Hauling (300) and Cleaning (200) in the work tab, so owners
+       tend their own house before doing general chores, but after real jobs. -->
+  <WorkTypeDef>
+    <defName>Homestead_HomeUpkeep</defName>
+    <labelShort>home</labelShort>
+    <pawnLabel>Homemaker</pawnLabel>
+    <gerundLabel>home upkeep</gerundLabel>
+    <description>Clean and repair your own house. Only pawns assigned to a house marker do this work, and only inside their own home.</description>
+    <verb>Maintain</verb>
+    <naturalPriority>310</naturalPriority>
+    <alwaysStartActive>true</alwaysStartActive>
+    <workTags>
+      <li>Cleaning</li>
+    </workTags>
+  </WorkTypeDef>
+
+  <WorkGiverDef>
+    <defName>Homestead_CleanOwnHouse</defName>
+    <label>clean own house</label>
+    <giverClass>Homestead.WorkGiver_CleanOwnHouse</giverClass>
+    <workType>Homestead_HomeUpkeep</workType>
+    <priorityInType>100</priorityInType>
+    <verb>clean</verb>
+    <gerund>cleaning</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>Homestead_RepairOwnHouse</defName>
+    <label>repair own house</label>
+    <giverClass>Homestead.WorkGiver_RepairOwnHouse</giverClass>
+    <workType>Homestead_HomeUpkeep</workType>
+    <priorityInType>90</priorityInType>
+    <verb>repair</verb>
+    <gerund>repairing</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+  </WorkGiverDef>
+
+</Defs>

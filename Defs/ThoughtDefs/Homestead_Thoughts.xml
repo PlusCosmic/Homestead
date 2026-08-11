@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Situational: whole-house impressiveness. Stage indices mirror the vanilla
+       Impressiveness RoomStatDef score stages (awful..wondrously impressive). -->
+  <ThoughtDef>
+    <defName>Homestead_HouseImpressiveness</defName>
+    <workerClass>Homestead.ThoughtWorker_HouseImpressiveness</workerClass>
+    <nullifyingTraits>
+      <li>Ascetic</li>
+    </nullifyingTraits>
+    <stages>
+      <li>
+        <label>awful house</label>
+        <description>My house is a hovel. I deserve better than this.</description>
+        <baseMoodEffect>-4</baseMoodEffect>
+      </li>
+      <li>
+        <label>dull house</label>
+        <description>My house is drab and uninviting.</description>
+        <baseMoodEffect>-2</baseMoodEffect>
+      </li>
+      <li IsNull="True" />
+      <!-- mediocre -->
+      <li>
+        <label>decent house</label>
+        <description>My house is decent enough. It's good to have a place of my own.</description>
+        <baseMoodEffect>1</baseMoodEffect>
+      </li>
+      <li>
+        <label>slightly impressive house</label>
+        <description>My house is rather nice. It's good to come home to.</description>
+        <baseMoodEffect>2</baseMoodEffect>
+      </li>
+      <li>
+        <label>somewhat impressive house</label>
+        <description>My house is impressive. I'm proud to live there.</description>
+        <baseMoodEffect>3</baseMoodEffect>
+      </li>
+      <li>
+        <label>very impressive house</label>
+        <description>My house is very impressive. I'm proud to call it mine.</description>
+        <baseMoodEffect>4</baseMoodEffect>
+      </li>
+      <li>
+        <label>extremely impressive house</label>
+        <description>My house is extremely impressive. People must envy me.</description>
+        <baseMoodEffect>5</baseMoodEffect>
+      </li>
+      <li>
+        <label>unbelievably impressive house</label>
+        <description>My house is unbelievably impressive. It's practically a manor.</description>
+        <baseMoodEffect>6</baseMoodEffect>
+      </li>
+      <li>
+        <label>wondrously impressive house</label>
+        <description>I live in a wondrous home. Few nobles live so well.</description>
+        <baseMoodEffect>7</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <!-- Situational: dirty house -->
+  <ThoughtDef>
+    <defName>Homestead_FilthyHouse</defName>
+    <workerClass>Homestead.ThoughtWorker_FilthyHouse</workerClass>
+    <stages>
+      <li>
+        <label>filthy house</label>
+        <description>My house is filthy. I should tidy it up.</description>
+        <baseMoodEffect>-3</baseMoodEffect>
+      </li>
+      <li>
+        <label>disgustingly filthy house</label>
+        <description>My house is absolutely disgusting. I can't live like this.</description>
+        <baseMoodEffect>-6</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <!-- Situational: homeless once the colony is established -->
+  <ThoughtDef>
+    <defName>Homestead_Homeless</defName>
+    <workerClass>Homestead.ThoughtWorker_Homeless</workerClass>
+    <stages>
+      <li>
+        <label>no house of my own</label>
+        <description>Others have houses of their own, but I have nowhere to call home.</description>
+        <baseMoodEffect>-2</baseMoodEffect>
+      </li>
+      <li>
+        <label>homeless</label>
+        <description>I've been without a home of my own for a long time. Doesn't anyone care?</description>
+        <baseMoodEffect>-4</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <!-- Memory: a stranger was in my house -->
+  <ThoughtDef>
+    <defName>Homestead_StrangerInMyHouse</defName>
+    <thoughtClass>Thought_Memory</thoughtClass>
+    <durationDays>0.3</durationDays>
+    <stackLimit>3</stackLimit>
+    <stackLimitForSameOtherPawn>1</stackLimitForSameOtherPawn>
+    <stackedEffectMultiplier>0.7</stackedEffectMultiplier>
+    <stages>
+      <li>
+        <label>stranger in my house</label>
+        <description>Someone was poking around my house uninvited. What were they after?</description>
+        <baseMoodEffect>-3</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <!-- Memory: spent free time at home -->
+  <ThoughtDef>
+    <defName>Homestead_RelaxedAtHome</defName>
+    <thoughtClass>Thought_Memory</thoughtClass>
+    <durationDays>1</durationDays>
+    <stackLimit>2</stackLimit>
+    <stackedEffectMultiplier>0.75</stackedEffectMultiplier>
+    <stages>
+      <li>
+        <label>relaxed at home</label>
+        <description>I spent some time relaxing in my own home. There's no place like it.</description>
+        <baseMoodEffect>2</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <!-- Memory: visited a friend's home -->
+  <ThoughtDef>
+    <defName>Homestead_VisitedFriend</defName>
+    <thoughtClass>Thought_Memory</thoughtClass>
+    <durationDays>1</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>visited a friend's home</label>
+        <description>I dropped in on a friend at their house. It was lovely to be welcomed in.</description>
+        <baseMoodEffect>3</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <!-- Memory: hosted a guest -->
+  <ThoughtDef>
+    <defName>Homestead_HadGuestOver</defName>
+    <thoughtClass>Thought_Memory</thoughtClass>
+    <durationDays>1</durationDays>
+    <stackLimit>3</stackLimit>
+    <stackLimitForSameOtherPawn>1</stackLimitForSameOtherPawn>
+    <stages>
+      <li>
+        <label>had a guest over</label>
+        <description>A friend came to visit my home. It felt good to play host.</description>
+        <baseMoodEffect>2</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+</Defs>

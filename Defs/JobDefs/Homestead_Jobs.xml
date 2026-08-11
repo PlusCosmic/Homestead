@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <JobDef>
+    <defName>Homestead_VisitFriendHome</defName>
+    <driverClass>Homestead.JobDriver_VisitFriendHome</driverClass>
+    <reportString>visiting a friend's home.</reportString>
+    <joyDuration>4000</joyDuration>
+    <joyKind>Social</joyKind>
+    <suspendable>false</suspendable>
+    <casualInterruptible>true</casualInterruptible>
+  </JobDef>
+
+</Defs>

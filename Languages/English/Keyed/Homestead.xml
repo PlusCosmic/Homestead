@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <Homestead_DefaultHouseName>{0}'s house</Homestead_DefaultHouseName>
+  <Homestead_UnclaimedHouse>Unclaimed house</Homestead_UnclaimedHouse>
+
+  <Homestead_TabHouse>House</Homestead_TabHouse>
+
+  <Homestead_GizmoRename>Rename house</Homestead_GizmoRename>
+  <Homestead_GizmoRenameDesc>Give this house a custom name.</Homestead_GizmoRenameDesc>
+  <Homestead_GizmoAddYard>Expand yard</Homestead_GizmoAddYard>
+  <Homestead_GizmoAddYardDesc>Paint outdoor cells (a garden, porch or yard) that belong to this house.</Homestead_GizmoAddYardDesc>
+  <Homestead_GizmoRemoveYard>Shrink yard</Homestead_GizmoRemoveYard>
+  <Homestead_GizmoRemoveYardDesc>Remove painted yard cells from this house.</Homestead_GizmoRemoveYardDesc>
+  <Homestead_GizmoAssignDesc>Assign the colonists who live in this house. Assigning a pawn automatically moves in their partner and children; you can add or remove anyone manually.</Homestead_GizmoAssignDesc>
+  <Homestead_GizmoExpandDoors>Claim adjoining rooms</Homestead_GizmoExpandDoors>
+  <Homestead_GizmoExpandDoorsDesc>When enabled, the house includes rooms connected to the marker's room through doors. When disabled, only the marker's own room counts.</Homestead_GizmoExpandDoorsDesc>
+
+  <Homestead_GizmoOuterDoor>Outer door</Homestead_GizmoOuterDoor>
+  <Homestead_GizmoOuterDoorDesc>Mark this as a front/back door. House claiming never crosses an outer door, so rooms beyond it stay unclaimed - use it to fence a house off from shared corridors or neighbouring dwellings.</Homestead_GizmoOuterDoorDesc>
+  <Homestead_InspectOuterDoor>Outer door: house claiming stops here.</Homestead_InspectOuterDoor>
+
+  <Homestead_InspectOwners>Owners</Homestead_InspectOwners>
+  <Homestead_InspectNoOwners>No owners assigned - select 'Set owner' to move a family in.</Homestead_InspectNoOwners>
+  <Homestead_InspectOutdoors>Marker is outdoors - place it inside a roofed, enclosed room.</Homestead_InspectOutdoors>
+  <Homestead_InspectRooms>Rooms: {0} ({1} cells, {2} yard)</Homestead_InspectRooms>
+  <Homestead_InspectImpressiveness>House impressiveness: {0} ({1})</Homestead_InspectImpressiveness>
+  <Homestead_InspectCleanliness>House cleanliness: {0}</Homestead_InspectCleanliness>
+
+  <Homestead_TabOwnersHeader>Household</Homestead_TabOwnersHeader>
+  <Homestead_TabStatsHeader>House</Homestead_TabStatsHeader>
+  <Homestead_TabYardCells>Yard cells: {0}</Homestead_TabYardCells>
+  <Homestead_TabInteriorCells>Interior: {0} rooms, {1} cells</Homestead_TabInteriorCells>
+  <Homestead_TabMoodContribution>Current house mood for owners: {0}</Homestead_TabMoodContribution>
+  <Homestead_TabRename>Rename</Homestead_TabRename>
+
+  <Homestead_LetterMergeLabel>Couple in separate houses</Homestead_LetterMergeLabel>
+  <Homestead_LetterMergeText>{0} and {1} are a couple, but they live in separate houses. Consider assigning them to the same house marker so they can share a home.</Homestead_LetterMergeText>
+
+  <Homestead_SettingsHomeless>Homeless mood debuff</Homestead_SettingsHomeless>
+  <Homestead_SettingsHomelessDesc>Once the colony is established (a house exists, or a year has passed), colonists without a house get a mood debuff that worsens over time.</Homestead_SettingsHomelessDesc>
+  <Homestead_SettingsGuests>Friends visit each other's homes</Homestead_SettingsGuests>
+  <Homestead_SettingsGuestsDesc>Colonists occasionally spend recreation time visiting the home of a friend, giving both a mood bonus.</Homestead_SettingsGuestsDesc>
+  <Homestead_SettingsAvoidance>Respect others' houses</Homestead_SettingsAvoidance>
+  <Homestead_SettingsAvoidanceDesc>Colonists won't idly wander into, clean, haul from, or use recreation buildings inside someone else's house. Emergencies (firefighting, rescue, doctoring, drafted orders, forced jobs) are unaffected.</Homestead_SettingsAvoidanceDesc>
+  <Homestead_SettingsReplaceBedroom>House thoughts replace bedroom thoughts</Homestead_SettingsReplaceBedroom>
+  <Homestead_SettingsReplaceBedroomDesc>Housed pawns judge their whole house instead of getting the vanilla 'slept in bedroom/barracks' thoughts. Pawns without a house keep vanilla behaviour.</Homestead_SettingsReplaceBedroomDesc>
+  <Homestead_SettingsMoodScale>Mood effect scale: {0}%</Homestead_SettingsMoodScale>
+  <Homestead_SettingsMoodScaleDesc>Multiplies the mood effect of every Homestead thought.</Homestead_SettingsMoodScaleDesc>
+  <Homestead_SettingsClaimDepth>Room claim depth: {0}</Homestead_SettingsClaimDepth>
+  <Homestead_SettingsClaimDepthDesc>How many doors deep a house extends from the marker's room.</Homestead_SettingsClaimDepthDesc>
+  <Homestead_SettingsMaxRoomCells>Max room size claimed: {0} cells</Homestead_SettingsMaxRoomCells>
+  <Homestead_SettingsMaxRoomCellsDesc>Rooms larger than this are considered communal (dining halls, warehouses) and are never claimed as part of a house.</Homestead_SettingsMaxRoomCellsDesc>
+
+</LanguageData>
