@@ -22,12 +22,16 @@
 Lay a welcome mat inside a dwelling (by the front door, if you like tradition) and assign a colonist - their spouse, fiance, lover and children are added automatically. The house covers the mat's room and connected rooms behind its doors, plus an optional painted yard.
 
 Features:
-- Whole-house mood: house impressiveness replaces the vanilla slept-in-bedroom thoughts for housed pawns; a filthy house causes a mood debuff.
-- Home upkeep: a new work type makes owners clean and repair their own house at high priority.
+- No more janitors: a new Home upkeep work type makes every household clean and repair its own house at high priority - even outside the home area.
+- Build homes, attract settlers: an empty furnished house occasionally draws a wandering settler who moves in and joins the colony (respects storyteller population limits).
+- Family under one roof: living with your partner, children or parents grants a lasting mood buff.
+- Sleep better at home: resting in your own house is faster (configurable).
+- Whole-house mood: house impressiveness replaces the vanilla slept-in-bedroom thoughts for housed pawns, and a truly lavish house can exceed anything a single bedroom offers; a filthy house causes a mood debuff.
 - Privacy: colonists won't idly wander into, clean, or haul from someone else's house (emergencies such as firefighting, rescue and doctoring are unaffected); owners are unsettled by strangers in their house.
 - Homeless: once the colony is established, pawns without a house slowly develop a homeless mood debuff.
 - Living: pawns who relax in their own house get a small comfort buff; friends occasionally visit each other's homes for recreation.
 - Houses are named automatically, renameable, and fully inspectable via the House tab. Everything is tunable in mod settings.
+- Dubs Bad Hygiene (full or Lite): houses want their own toilet and washing facilities - a debuff without, a small buff with a proper bathroom. Detected automatically, no patch needed.
 
 Requires Harmony. Safe to add to existing saves; removing mid-save will produce one-time errors.</description>
 </ModMetaData>

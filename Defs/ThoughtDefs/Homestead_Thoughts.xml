@@ -57,6 +57,60 @@
         <description>I live in a wondrous home. Few nobles live so well.</description>
         <baseMoodEffect>7</baseMoodEffect>
       </li>
+      <!-- Above the vanilla bands: only reachable by a whole lavish house,
+           never by a single bedroom. -->
+      <li>
+        <label>palatial house</label>
+        <description>My home is a palace. No bedroom, however grand, could compare to living like this.</description>
+        <baseMoodEffect>9</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <!-- Situational: living together with close family -->
+  <ThoughtDef>
+    <defName>Homestead_FamilyUnderOneRoof</defName>
+    <workerClass>Homestead.ThoughtWorker_FamilyUnderOneRoof</workerClass>
+    <stages>
+      <li>
+        <label>living with my family</label>
+        <description>I share my home with family. It's good to have them close.</description>
+        <baseMoodEffect>3</baseMoodEffect>
+      </li>
+      <li>
+        <label>our family under one roof</label>
+        <description>My partner and children all live under our roof. This is what I work for.</description>
+        <baseMoodEffect>4</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <!-- Situational: bathroom facilities at home. Inert unless Dubs Bad Hygiene
+       (full or Lite) is loaded. -->
+  <ThoughtDef>
+    <defName>Homestead_HouseBathroom</defName>
+    <workerClass>Homestead.ThoughtWorker_HouseBathroom</workerClass>
+    <stages>
+      <li>
+        <label>no bathroom in my house</label>
+        <description>My house has no toilet and nowhere to wash. It's hardly civilised living.</description>
+        <baseMoodEffect>-3</baseMoodEffect>
+      </li>
+      <li>
+        <label>no toilet in my house</label>
+        <description>My house has no toilet of its own. Queuing for the communal one is beneath me.</description>
+        <baseMoodEffect>-2</baseMoodEffect>
+      </li>
+      <li>
+        <label>no place to wash at home</label>
+        <description>There's nowhere to wash up in my house. I have to traipse elsewhere just to feel clean.</description>
+        <baseMoodEffect>-1</baseMoodEffect>
+      </li>
+      <li>
+        <label>a proper bathroom at home</label>
+        <description>My house has its own toilet and somewhere to wash. Now this is civilised living.</description>
+        <baseMoodEffect>2</baseMoodEffect>
+      </li>
     </stages>
   </ThoughtDef>
 

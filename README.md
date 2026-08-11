@@ -28,6 +28,21 @@ A RimWorld 1.6 mod that gives colonists **houses**, not just bedrooms.
   buff; colonists occasionally visit a friend's home for social recreation, giving
   both sides a mood bonus. Couples living apart trigger a one-time suggestion
   letter to merge households.
+- **Family under one roof**: sharing a house with a love partner, child or parent
+  gives +3; partner *and* child together gives +4.
+- **Sleep better at home**: resting inside your own house multiplies rest
+  effectiveness (slider, default +10%).
+- **Palatial ceiling**: an extra house-impressiveness stage (+9) above vanilla's
+  top band, at average impressiveness ≥ 360 — houses can out-buff any bedroom.
+- **Empty homes attract settlers**: a functional, ownerless house containing a
+  free colonist bed rolls an MTB-12-day chance (per empty house, 6-day cooldown,
+  only while storyteller `PopulationIntent > 0`) to spawn a Villager who walks in,
+  claims the house and joins the colony.
+- **Dubs Bad Hygiene integration** (soft, full or Lite; detected via
+  `AccessTools.TypeByName` on `Building_BaseToilet` etc., no assembly reference):
+  housed pawns want a toilet (−2 without) and washing fixture (−1 without, −3
+  with neither) in their house, +2 with both; the inspect string gains a
+  Bathroom line. Water troughs/pet bowls don't count as washing.
 - **House tab & naming**: houses auto-name from the first owner's surname, are
   renameable, and the House inspector tab shows household, rooms, impressiveness,
   cleanliness and current mood contribution.

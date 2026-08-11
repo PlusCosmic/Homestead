@@ -27,6 +27,8 @@ namespace Homestead
 
         private float cachedImpressiveness;
         private float cachedCleanliness;
+        private bool cachedHasToilet;
+        private bool cachedHasWashing;
         private int statsCacheTick = -99999;
 
         private static Texture2D renameIcon;
@@ -124,6 +126,8 @@ namespace Homestead
             float impSum = 0f;
             float cleanSum = 0f;
             int cells = 0;
+            cachedHasToilet = false;
+            cachedHasWashing = false;
             foreach (Room room in cachedRooms)
             {
                 if (room == null || room.Dereferenced)
@@ -134,6 +138,18 @@ namespace Homestead
                 impSum += room.GetStat(RoomStatDefOf.Impressiveness) * c;
                 cleanSum += room.GetStat(RoomStatDefOf.Cleanliness) * c;
                 cells += c;
+                if (DbhCompat.Active && (!cachedHasToilet || !cachedHasWashing))
+                {
+                    foreach (Thing thing in room.ContainedAndAdjacentThings)
+                    {
+                        if (!cachedInteriorCells.Contains(thing.Position))
+                        {
+                            continue;
+                        }
+                        cachedHasToilet |= DbhCompat.IsToilet(thing);
+                        cachedHasWashing |= DbhCompat.IsWashingFixture(thing);
+                    }
+                }
             }
             cachedImpressiveness = cells > 0 ? impSum / cells : 0f;
             cachedCleanliness = cells > 0 ? cleanSum / cells : 0f;
@@ -154,6 +170,24 @@ namespace Homestead
             {
                 RecalcStatsIfNeeded();
                 return cachedCleanliness;
+            }
+        }
+
+        public bool HasToilet
+        {
+            get
+            {
+                RecalcStatsIfNeeded();
+                return cachedHasToilet;
+            }
+        }
+
+        public bool HasWashing
+        {
+            get
+            {
+                RecalcStatsIfNeeded();
+                return cachedHasWashing;
             }
         }
 
@@ -303,6 +337,14 @@ namespace Homestead
             sb.AppendLine("Homestead_InspectImpressiveness".Translate(
                 AvgImpressiveness.ToString("F0"), ImpressivenessStageLabel));
             sb.AppendLine("Homestead_InspectCleanliness".Translate(AvgCleanliness.ToString("F1")));
+            if (DbhCompat.Active)
+            {
+                string state = HasToilet && HasWashing ? "Homestead_BathroomFull".Translate()
+                    : HasToilet ? "Homestead_BathroomNoWashing".Translate()
+                    : HasWashing ? "Homestead_BathroomNoToilet".Translate()
+                    : "Homestead_BathroomNone".Translate();
+                sb.AppendLine("Homestead_InspectBathroom".Translate(state));
+            }
             return sb.ToString().TrimEndNewlines();
         }
     }
