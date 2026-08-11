@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Homestead</name>
+  <author>PlusCosmic</author>
+  <packageId>pluscosmic.homestead</packageId>
+  <supportedVersions>
+    <li>1.6</li>
+  </supportedVersions>
+  <modDependencies>
+    <li>
+      <packageId>brrainz.harmony</packageId>
+      <displayName>Harmony</displayName>
+      <steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+      <downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
+    </li>
+  </modDependencies>
+  <loadAfter>
+    <li>brrainz.harmony</li>
+  </loadAfter>
+  <description>Give your colonists houses, not just bedrooms.
+
+Lay a welcome mat inside a dwelling (by the front door, if you like tradition) and assign a colonist - their spouse, fiance, lover and children are added automatically. The house covers the mat's room and connected rooms behind its doors, plus an optional painted yard.
+
+Features:
+- Whole-house mood: house impressiveness replaces the vanilla slept-in-bedroom thoughts for housed pawns; a filthy house causes a mood debuff.
+- Home upkeep: a new work type makes owners clean and repair their own house at high priority.
+- Privacy: colonists won't idly wander into, clean, or haul from someone else's house (emergencies such as firefighting, rescue and doctoring are unaffected); owners are unsettled by strangers in their house.
+- Homeless: once the colony is established, pawns without a house slowly develop a homeless mood debuff.
+- Living: pawns who relax in their own house get a small comfort buff; friends occasionally visit each other's homes for recreation.
+- Houses are named automatically, renameable, and fully inspectable via the House tab. Everything is tunable in mod settings.
+
+Requires Harmony. Safe to add to existing saves; removing mid-save will produce one-time errors.</description>
+</ModMetaData>

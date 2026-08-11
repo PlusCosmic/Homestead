@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <JoyGiverDef>
+    <defName>Homestead_VisitFriendHome</defName>
+    <giverClass>Homestead.JoyGiver_VisitFriendHome</giverClass>
+    <baseChance>1.2</baseChance>
+    <jobDef>Homestead_VisitFriendHome</jobDef>
+    <joyKind>Social</joyKind>
+  </JoyGiverDef>
+
+</Defs>

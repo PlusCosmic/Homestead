@@ -1,0 +1,10 @@
+# C# build intermediates
+Source/obj/
+Source/bin/
+*.user
+
+# OS/editor cruft
+.vs/
+.idea/
+*.swp
+.DS_Store
