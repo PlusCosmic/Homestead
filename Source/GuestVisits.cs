@@ -71,6 +71,7 @@ namespace Homestead
             house.EnsureCacheFresh();
             IEnumerable<IntVec3> cells = house.cachedInteriorCells
                 .Where(c => c.Standable(pawn.Map)
+                    && !c.IsForbidden(pawn)
                     && pawn.CanReach(c, PathEndMode.OnCell, Danger.None)
                     && c.GetDoor(pawn.Map) == null);
             return cells.TryRandomElement(out cell);
@@ -93,6 +94,7 @@ namespace Homestead
         protected override IEnumerable<Toil> MakeNewToils()
         {
             this.FailOn(() => Marker == null || Marker.Destroyed || !Marker.Spawned);
+            this.FailOn(() => job.GetTarget(CellInd).Cell.IsForbidden(pawn));
 
             yield return Toils_Goto.GotoCell(CellInd, PathEndMode.OnCell);
 
